@@ -239,7 +239,7 @@ class Characteristic:
             HAP_REPR_FORMAT: self.properties[PROP_FORMAT],
         }
 
-        value = self.get_value()
+        value = self.value
         if self.properties[PROP_FORMAT] in HAP_FORMAT_NUMERICS:
             hap_rep.update({k: self.properties[k] for k in
                             self.properties.keys() & PROP_NUMERIC})
